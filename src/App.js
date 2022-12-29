@@ -18,15 +18,15 @@ function App() {
           <Link to="/contato">contato</Link>
         </ul>
       </div>
-      <Routes>
-        <Container>
+      <Container customClass= "min-height">
+        <Routes>
           <Route path='/' exact='true' element={<Home />}></Route>
           <Route path='/empresa' element={<Company />}></Route>
           <Route path='/contato' element={<Contact />}></Route>
           <Route path='/newprojects' element={<NewProjets />}></Route>
-        </Container>
-      </Routes>
-
+        </Routes>
+      
+      </Container>
       <p>Footer</p>
     </Router>
 
