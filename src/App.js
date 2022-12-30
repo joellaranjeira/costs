@@ -14,7 +14,7 @@ function App() {
         <ul>
           <Link to="/">Home</Link>
           <Link to="/empresa">Empresa</Link>
-          <Link to="/newprojects">NewProjets</Link>
+          <Link to="/NovoProjeto">Novo Projeto</Link>
           <Link to="/contato">contato</Link>
         </ul>
       </div>
@@ -22,8 +22,9 @@ function App() {
         <Routes>
           <Route path='/' exact='true' element={<Home />}></Route>
           <Route path='/empresa' element={<Company />}></Route>
+          <Route path='/NovoProjeto' element={<NewProjets />}></Route>
           <Route path='/contato' element={<Contact />}></Route>
-          <Route path='/newprojects' element={<NewProjets />}></Route>
+         
         </Routes>
       
       </Container>
