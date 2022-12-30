@@ -4,32 +4,32 @@ import Container from "./Container"
 import styles from './Navbar.module.css'
 import logo from '../../img/costs_logo.png'
 
-function Navbar(){
-    return (
-        <nav className={styles.navbar}>
-      
-        <Container>
-        <Link to="/"> 
-            <img src={logo} alt="costs"/> 
+function Navbar() {
+  return (
+    <nav className={styles.navbar}>
+
+      <Container>
+        <Link to="/">
+          <img src={logo} alt="costs" />
         </Link>
-        <ul  className={styles.list}>
-        <li className={styles.item}>
-          <Link to="/">Home</Link>
-          </li>
-          
+        <ul className={styles.list}>
           <li className={styles.item}>
-          <Link to="/projetos">Projetos</Link>
+            <Link to="/">Home</Link>
           </li>
+
           <li className={styles.item}>
-          <Link to="/empresa">Empresa</Link>
+            <Link to="/projetos">Projetos</Link>
           </li>
           <li className={styles.item}>
-          <Link to="/contato">contato</Link>
+            <Link to="/empresa">Empresa</Link>
+          </li>
+          <li className={styles.item}>
+            <Link to="/contato">contato</Link>
           </li>
         </ul>
-        </Container>
-      </nav>
-    )
+      </Container>
+    </nav>
+  )
 
 }
 
