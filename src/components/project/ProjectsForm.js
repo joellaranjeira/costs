@@ -1,16 +1,27 @@
+import { useEffect, useState } from 'react'
 import styles from './ProjectsForm.module.css'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import SubmitButton from '../form/SubmitButton'
 
-function ProjectsForm({btnText}) {
+function ProjectsForm({ btnText }) {
+    const [categories, setCategories] = useState([])
+
+    useEffect( ()=>{
+        fetch("http://localhost:5000/categories", {
+            method: "GET", headers: { 'Content-type': 'application/json', },
+        }).then(resp => resp.json())
+            .then((data) => { setCategories(data)})
+            .catch((err) => console.log(err))
+    })
+
     return (
         <form className={styles.projectsform_container}>
-            
+
             <Input type="text" text="Nome do projeto" name="name" placeholder="Insira o nome do projeto" />
             <Input type="number" text="Orçamento do projeto" name="budget" placeholder="Insira o orçamento total" />
-            <Select name="category_id" text="Selecione a categoria" />
-            <SubmitButton text={btnText}/>
+            <Select name="category_id" text="Selecione a categoria" optins={categories} />
+            <SubmitButton text={btnText} />
         </form>
     )
 }
