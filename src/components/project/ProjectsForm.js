@@ -40,7 +40,6 @@ function ProjectsForm({ handleSubmit, btnText, projectData }) {
                 name: e.target.options[e.target.selectedIndex].text,
             },
         })
-
     }
 
     return (

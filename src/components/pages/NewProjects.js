@@ -1,17 +1,17 @@
-import {useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import ProjectsForm from '../project/ProjectsForm'
 import styles from './NewProjects.module.css'
 
 function NewProjects() {
 
-    const history = history.push()
+    const history = useNavigate()
 
-    function createPost(project){
-
+    function createPost(project) {
         //initialize cost and services
         project.cost = 0
         project.services = []
+
         fetch('http://localhost:5000/projects', {
             method: 'POST',
             headers: {
@@ -19,23 +19,24 @@ function NewProjects() {
             },
             body: JSON.stringify(project)
         })
-        .then((resp)=>resp.json())
-        .then((data)=> {
-            console.log(data)
-            //redirect
-        })
-        .catch((err)=>console.log(err))
+            .then((resp) => resp.json())
+            .then((data) => {
+                console.log(data)
+                //redirect
+            })
+            .catch((err) => console.log(err))
     }
 
     return (
         <div className={styles.newprojects_container}>
             <h1>Criar Projetos</h1>
             <p>Crie seu projeto para depois adicionar os serviços</p>
-            <ProjectsForm handleSubmit={createPost} btnText="Criar Projeto" />
+            <ProjectsForm
+                handleSubmit={createPost}
+                btnText="Criar Projeto"
+            />
         </div>
-
     )
-
 }
 
 export default NewProjects
