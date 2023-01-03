@@ -17,13 +17,13 @@ function NewProjects() {
             headers: {
                 'Content-type': 'application/json',
             },
-            body: JSON.stringify(project)
+            body: JSON.stringify(project),
         })
             .then((resp) => resp.json())
             .then((data) => {
                 console.log(data)
                 //redirect
-                history.push('/projects', {message: 'Projeto criado com sucesso!'})
+                //history.push('/projects', {message: 'Projeto criado com sucesso!'})
             })
             .catch((err) => console.log(err))
     }
