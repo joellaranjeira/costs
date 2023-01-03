@@ -5,6 +5,7 @@ import Select from '../form/Select'
 import SubmitButton from '../form/SubmitButton'
 
 function ProjectsForm({ btnText }) {
+
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
@@ -23,7 +24,6 @@ function ProjectsForm({ btnText }) {
 
     return (
         <form className={styles.form}>
-
             <Input
                 type="text"
                 text="Nome do projeto"
