@@ -33,8 +33,7 @@ function ProjectsForm({ handleSubmit, btnText, projectData }) {
 
     function handleChange(e) {
         setProject({ ...project, [e.target.name]: e.target.value })
-        console.log(project)
-    }
+        }
 
     function handleCategory(e) {
         setProject({
@@ -54,7 +53,7 @@ function ProjectsForm({ handleSubmit, btnText, projectData }) {
                 name="name"
                 placeholder="Insira o nome do projeto"
                 handleOnChange={handleChange}
-              //value={project.name }
+              value={project.name }
             />
             <Input
                 type="number"
@@ -62,7 +61,7 @@ function ProjectsForm({ handleSubmit, btnText, projectData }) {
                 name="budget"
                 placeholder="Insira o orçamento total"
                 handleOnChange={handleChange}
-               //value={project.budget }
+               value={project.budget }
             />
             <Select
                 name="category_id"
