@@ -6,7 +6,7 @@ import SubmitButton from '../form/SubmitButton'
 
 function ProjectsForm({ handleSubmit, btnText, projectData }) {
     const [categories, setCategories] = useState([])
-    const [project, setProject]= useState(projectData || {})
+    const [project, setProject] = useState(projectData || {})
 
     useEffect(() => {
         fetch('http://localhost:5000/categories', {
@@ -22,23 +22,26 @@ function ProjectsForm({ handleSubmit, btnText, projectData }) {
             .catch((err) => console.log(err))
     }, [])
 
-    const submit = (e)=> {
+    const submit = (e) => {
         e.preventDefault()
-        console.log(project)
-        //handleSubmit(project)
+       // console.log(project)
+        handleSubmit(project)
     }
 
-    function handleChance(e){
-        setProject({...project, [e.target.name]: e.target.value})
+    function handleChance(e) {
+        setProject({ ...project, [e.target.name]: e.target.value })
         //console.log(project)
     }
 
-    function handleCategory(e){
-        setProject({...project, category: {
-            id: e.target.value,
-            name: e.target.options[e.target.selectedIndex].text,
-        }})
-        console.log(project)
+    function handleCategory(e) {
+        setProject({
+            ...project, category: {
+                id: e.target.value,
+                name: e.target.options[e.target.selectedIndex].text,
+
+            }
+        })
+        //console.log(project)
     }
 
     return (
@@ -50,8 +53,8 @@ function ProjectsForm({ handleSubmit, btnText, projectData }) {
                 name="name"
                 placeholder="Insira o nome do projeto"
                 handleOnchange={handleChance}
-                //value={project.name ? project.name : ''}
-                value={project.name}
+                value={project.name ? project.name : ''}
+
             />
             <Input
                 type="number"
@@ -59,16 +62,16 @@ function ProjectsForm({ handleSubmit, btnText, projectData }) {
                 name="budget"
                 placeholder="Insira o orçamento total"
                 handleOnchange={handleChance}
-                //value={project.budget ? project.budget : ''}
-                value={project.budget}
+                value={project.budget ? project.budget : ''}
+
             />
             <Select
                 name="category_id"
                 text="Selecione a categoria"
                 options={categories}
                 handleOnchange={handleCategory}
-                //value={project.category ? project.category.id : ''}
-                value={project.category}
+                value={project.category ? project.category.id : ''}
+
             />
             <SubmitButton text={btnText} />
         </form>
