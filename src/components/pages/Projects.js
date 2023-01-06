@@ -1,6 +1,7 @@
 function Projects (){
     
-    return <h1>Lista de produtos</h1>
+    return (
+            <h1>Lista de produtos</h1>)
 
 }
 

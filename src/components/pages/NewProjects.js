@@ -5,6 +5,7 @@ import styles from './NewProjects.module.css'
 function NewProjects() {
 
     const history = useNavigate()
+
     function createPost(project) {
         //inicializando
         project.cost = 0
@@ -22,7 +23,7 @@ function NewProjects() {
             .then((data) => {
                 console.log(data)
                 //redirect
-               history(('/projects', { message: 'Projeto criado com suceso'}))
+               history('/projetos', {message: 'Projeto criado com suceso'})
             })
             .catch((err) => console.log(err))
     }
