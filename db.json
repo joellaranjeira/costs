@@ -10,6 +10,35 @@
       "cost": 0,
       "services": [],
       "id": 1
+    },
+    {
+      "name": "Fabricio",
+      "budget": "15987",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Joao",
+      "budget": "12000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "alair",
+      "budget": "1236",
+      "cost": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [
