@@ -23,7 +23,7 @@ function NewProjects() {
             .then((data) => {
                 console.log(data)
                 //redirect
-               history('/projetos', {message: 'Projeto criado com suceso'})
+               history('/projetos',{state: {message: 'Projeto criado com suceso'}})
             })
             .catch((err) => console.log(err))
     }
