@@ -9,6 +9,7 @@ import Projects from './components/pages/Projects';
 import Container from './components/layout/Container';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import Project from './components/pages/Project';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/projetos' element={<Projects />}></Route>
           <Route path='/newprojects' element={<NewProjects />}></Route>
           <Route path='/contato' element={<Contact />}></Route>
+          <Route path='/projeto/:id' element={<Project />}></Route>
         </Routes>
       </Container>
       <Footer />
