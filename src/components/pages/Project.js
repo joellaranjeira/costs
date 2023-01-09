@@ -20,7 +20,7 @@ function Project() {
             fetch(`http://localhost:5000/projects/${id}`, {
                 method: 'GET',
                 Headers: {
-                    'content-Type': 'application/jon',
+                    'content-Type': 'application/json',
                 },
             }).then((resp) => resp.json())
                 .then((data) => {
