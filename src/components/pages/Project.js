@@ -12,8 +12,6 @@ function Project() {
 
     useEffect(() => {
         setTimeout(() => {
-
-
             fetch(`http://localhost:5000/projects/${id}`, {
                 method: 'GET',
                 Headers: {
@@ -25,13 +23,11 @@ function Project() {
                 })
                 .catch((err) => console.log(err))
         }, 300)
-
     }, [id])
 
     function toggleProjectForm() {
         setShowProjectForm(!showProjectForm)
     }
-
     return (
         <>{project.name ? (
             <div className={styles.project_details}>
@@ -61,7 +57,6 @@ function Project() {
                     </div>
                 </Container>
             </div>
-
         ) : (
             <Loading />
         )
