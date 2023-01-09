@@ -21,6 +21,28 @@
       "cost": 0,
       "services": [],
       "id": 2
+    },
+    {
+      "name": "Automação site",
+      "budget": "20000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "Estilizar Site",
+      "budget": "5000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [
