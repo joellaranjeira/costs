@@ -7,19 +7,13 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 1100,
+      "cost": 100,
       "services": [
         {
           "name": "Criar api",
           "cost": "100",
           "description": "criar api de cadastro de cliente.",
           "id": "0c427d98-dc68-40bd-93b0-03b685edc132"
-        },
-        {
-          "name": "Construção da interface usuario",
-          "cost": "1000",
-          "description": "Criar as interface para o usuário cadastrar os clientes.",
-          "id": "1c254b0b-6db1-4c26-97b5-309320577838"
         }
       ],
       "id": 1
